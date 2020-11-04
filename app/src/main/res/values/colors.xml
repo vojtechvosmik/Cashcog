@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- MAIN -->
     <color name="red_main">#ff4949</color>
     <color name="red_light">#fc8a89</color>
+
+    <!-- OTHER -->
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-
+    <color name="light_grey">#fafafa</color>
+    <color name="green">#66BB6A</color>
+    <color name="red">#EF5350</color>
 </resources>

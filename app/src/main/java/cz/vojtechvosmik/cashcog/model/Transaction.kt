@@ -9,6 +9,12 @@ data class Transaction(
         @PrimaryKey(autoGenerate = true)
         val id: Int? = null,
         var note: String,
-        var value: Double,
+        var amount: Int,
+        var type: TransactionType,
         var date: Date
 )
+
+enum class TransactionType {
+        PLUS,
+        MINUS
+}

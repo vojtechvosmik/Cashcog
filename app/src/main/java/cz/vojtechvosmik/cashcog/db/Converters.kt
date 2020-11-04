@@ -1,6 +1,7 @@
 package cz.vojtechvosmik.cashcog.db
 
 import androidx.room.TypeConverter
+import cz.vojtechvosmik.cashcog.model.TransactionType
 import java.util.*
 
 class Converters {
@@ -13,5 +14,25 @@ class Converters {
     @TypeConverter
     fun dateToTimestamp(date: Date?): Long? {
         return date?.time
+    }
+
+    @TypeConverter
+    fun typeToString(type: TransactionType): String? {
+        return type.toString()
+    }
+
+    @TypeConverter
+    fun typeToString(string: String): TransactionType? {
+        return when (string) {
+            TransactionType.PLUS.toString() -> {
+                TransactionType.PLUS
+            }
+            TransactionType.MINUS.toString() -> {
+                TransactionType.MINUS
+            }
+            else -> {
+                null
+            }
+        }
     }
 }
