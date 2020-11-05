@@ -5,8 +5,20 @@
 
     <!-- CONTENT DESCRIPTION -->
     <string name="description_transaction_icon">transaction icon</string>
+    <string name="description_back">back</string>
+    <string name="description_add_transaction">add transaction</string>
+
+    <!-- HINTS -->
+    <string name="hint_note">note</string>
+    <string name="hint_amount">amount</string>
+
+    <!-- ERRORS -->
+    <string name="error_add_transaction_inputs">Please fill all inputs</string>
 
     <!-- OTHER -->
     <string name="no_transactions">add your first transaction by clicking on "+" below</string>
+    <string name="income">income</string>
+    <string name="expense">expense</string>
+    <string name="transaction_added">transaction was added</string>
 
 </resources>
