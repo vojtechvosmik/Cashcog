@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cashcog"
         tools:ignore="AllowBackup">
-        <activity android:name=".activity.NewTransactionActivity"/>
+        <activity android:name=".activity.NewTransactionActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

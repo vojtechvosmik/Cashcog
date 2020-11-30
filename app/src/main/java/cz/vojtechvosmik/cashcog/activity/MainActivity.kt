@@ -2,9 +2,12 @@ package cz.vojtechvosmik.cashcog.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
 import cz.vojtechvosmik.cashcog.R
 import cz.vojtechvosmik.cashcog.fragment.TransactionsFragment
 import cz.vojtechvosmik.cashcog.util.FragmentUtils
+import java.nio.charset.Charset
 
 class MainActivity : AppCompatActivity() {
 

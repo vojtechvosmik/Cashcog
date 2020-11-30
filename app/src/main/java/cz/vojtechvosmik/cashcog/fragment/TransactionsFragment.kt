@@ -11,7 +11,10 @@ import cz.vojtechvosmik.cashcog.adapters.TransactionAdapter
 import cz.vojtechvosmik.cashcog.db.AppDatabase
 import cz.vojtechvosmik.cashcog.model.Transaction
 import cz.vojtechvosmik.cashcog.model.TransactionType
+import cz.vojtechvosmik.cashcog.util.FragmentUtils
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_transaction.*
+import kotlinx.android.synthetic.main.toolbar.view.*
 
 class TransactionsFragment : BaseFragment() {
 
@@ -32,6 +35,7 @@ class TransactionsFragment : BaseFragment() {
     private fun initViews() {
         recycler_transactions.layoutManager = LinearLayoutManager(context)
         fab_add.setOnClickListener { startActivity(Intent(context, NewTransactionActivity::class.java)) }
+        fab_graph.setOnClickListener { FragmentUtils.changeFragment(GraphFragment(), true, false) }
     }
 
     private fun initContent() {
