@@ -12,6 +12,7 @@ import cz.vojtechvosmik.cashcog.db.AppDatabase
 import cz.vojtechvosmik.cashcog.model.Transaction
 import cz.vojtechvosmik.cashcog.model.TransactionType
 import cz.vojtechvosmik.cashcog.util.FragmentUtils
+import cz.vojtechvosmik.cashcog.util.StorageUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_transaction.*
 import kotlinx.android.synthetic.main.toolbar.view.*
@@ -36,6 +37,7 @@ class TransactionsFragment : BaseFragment() {
         recycler_transactions.layoutManager = LinearLayoutManager(context)
         fab_add.setOnClickListener { startActivity(Intent(context, NewTransactionActivity::class.java)) }
         fab_graph.setOnClickListener { FragmentUtils.changeFragment(GraphFragment(), true, false) }
+        fab_currency.setOnClickListener { FragmentUtils.changeFragment(CurrencyFragment(), true, false) }
     }
 
     private fun initContent() {
@@ -74,7 +76,8 @@ class TransactionsFragment : BaseFragment() {
             txt_summary.text = ("- " + (txt_summary.text!!.toString().toInt() * -1).toString())
             txt_summary.setTextColor(ContextCompat.getColor(context!!, R.color.red))
         }
-        txt_plus_summary.text = ("+ $summaryPlus")
-        txt_minus_summary.text = ("- " + (summaryMinus * -1).toString())
+        txt_summary.text = (txt_summary.text.toString() + " " + StorageUtils.getValue(context!!, "currency", "CZK"))
+        txt_plus_summary.text = (("+ $summaryPlus") + " " + StorageUtils.getValue(context!!, "currency", "CZK"))
+        txt_minus_summary.text = (("- " + (summaryMinus * -1).toString()) + " " + StorageUtils.getValue(context!!, "currency", "CZK"))
     }
 }

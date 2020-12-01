@@ -10,6 +10,7 @@ import cz.vojtechvosmik.cashcog.R
 import cz.vojtechvosmik.cashcog.model.Transaction
 import cz.vojtechvosmik.cashcog.model.TransactionType
 import cz.vojtechvosmik.cashcog.util.DateUtils
+import cz.vojtechvosmik.cashcog.util.StorageUtils
 import kotlinx.android.synthetic.main.item_transaction.view.*
 
 class TransactionAdapter(private val context: Context, private val items: List<Transaction>) : RecyclerView.Adapter<TransactionViewHolder>() {
@@ -40,5 +41,6 @@ class TransactionViewHolder(private val context: Context, itemView: View) : Recy
             itemView.txt_amount.text = ("- " + item.amount.toString())
             itemView.txt_amount.setTextColor(ContextCompat.getColor(context, R.color.red))
         }
+        itemView.txt_amount.text = (itemView.txt_amount.text.toString()  + " " + StorageUtils.getValue(context, "currency", "CZK"))
     }
 }

@@ -32,6 +32,19 @@
         app:srcCompat="@drawable/ic_baseline_graphic_eq_24"
         android:tint="@color/white"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_big"
+        android:contentDescription="@string/description_add_transaction"
+        app:srcCompat="@drawable/ic_baseline_attach_money_24"
+        android:layout_toEndOf="@id/fab_graph"
+        android:tint="@color/white"/>
+
     <androidx.core.widget.NestedScrollView
         android:background="@color/light_grey"
         android:layout_width="match_parent"

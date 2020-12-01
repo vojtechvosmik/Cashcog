@@ -11,6 +11,7 @@
     <!-- HINTS -->
     <string name="hint_note">note</string>
     <string name="hint_amount">amount</string>
+    <string name="hint_currency">currency</string>
 
     <!-- ERRORS -->
     <string name="error_add_transaction_inputs">Please fill all inputs</string>
@@ -20,5 +21,6 @@
     <string name="income">income</string>
     <string name="expense">expense</string>
     <string name="transaction_added">transaction was added</string>
+    <string name="currency_changed">Currency was changed. Restart app to apply changes</string>
 
 </resources>
